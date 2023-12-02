@@ -5,6 +5,7 @@ using WebAPI.Services.enums;
 
 namespace WebAPI.Controllers;
 
+[Route("api/v1/")]
 [Produces("application/json")]
 [Consumes("application/json")]
 [ApiController]
@@ -18,7 +19,7 @@ public class ProductController : ControllerBase
         _productService = productService;
     }
 
-    [HttpPost("/products")]
+    [HttpPost("products")]
     public IActionResult AddProduct(AddProductRequest request)
     {
         if (!ModelState.IsValid)
@@ -39,7 +40,7 @@ public class ProductController : ControllerBase
         
         return Ok();
     }
-    [HttpGet("/products")]
+    [HttpGet("products")]
     public IActionResult GetProduct(Guid? id)
     {
         
@@ -67,7 +68,7 @@ public class ProductController : ControllerBase
 
     }
     
-    [HttpGet("/groupstree")]
+    [HttpGet("groupstree")]
     public IActionResult GetGroupsTree()
     {
         if (!ModelState.IsValid)
