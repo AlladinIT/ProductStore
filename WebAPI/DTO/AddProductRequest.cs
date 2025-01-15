@@ -24,6 +24,7 @@ public class AddProductRequest
         
     public void CalculateMissingValues()
     {
+        //commit 1
         if (Price == null && PriceWithVAT != null && VatRate != null)
         {
             Price = PriceWithVAT / (1 + VatRate / 100);
