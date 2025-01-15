@@ -26,6 +26,7 @@ public class AddProductRequest
     {
         //commit 1
         //commit 2
+        //commit 3
         if (Price == null && PriceWithVAT != null && VatRate != null)
         {
             Price = PriceWithVAT / (1 + VatRate / 100);
