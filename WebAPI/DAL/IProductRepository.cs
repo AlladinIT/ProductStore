@@ -5,6 +5,7 @@ namespace WebAPI.DAL;
 
 public interface IProductRepository
 {
+    //Commit 6
     List<Store>? GetStoresByIds(List<Guid> requestStoresIds);
 
     void AddProduct(Product product);
